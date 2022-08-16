@@ -165,7 +165,7 @@ button.btn-lg {
     HEADER
 \*------------------------------------*/
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 3;
@@ -287,7 +287,8 @@ html {
   width: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: black; }
   @media (min-width: 79.9375em) {
     html {
       -webkit-overflow-scrolling: inherit;
@@ -320,6 +321,10 @@ main {
 /*------------------------------------*\
     SECTION
 \*------------------------------------*/
+section {
+  width: 100vw;
+  height: 100vh; }
+
 /*------------------------------------*\
     FOOTER
 \*------------------------------------*/

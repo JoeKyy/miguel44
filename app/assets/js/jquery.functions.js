@@ -12,8 +12,10 @@ $(function () {
 	});
 
 	$('header .menu nav ul li a').click(function(){
-		$('.nav-button').removeClass('is-active');
-		$('.menu nav').removeClass('nav-menu--open');
-		$('.menu nav').addClass('nav-menu--close');
+		if ($('.nav-button').hasClass('is-active')) {
+			$('.nav-button').removeClass('is-active');
+			$('.menu nav').removeClass('nav-menu--open');
+			$('.menu nav').addClass('nav-menu--close');
+		}
 	});
 });
