@@ -1,6 +1,49 @@
 a,
 [type="submit"],
 button{
-	&.btn {		
+	&.btn {
+		padding: space(p) space(base);
+		border-radius: 2px;
+
+		&.btn-primary {
+			color: color(light);
+
+			background-color: color(primary);
+			text-transform: inherit;
+
+			&:hover {
+				color: color(light);
+				background-color: darken($color: color(primary), $amount: 20);
+			}
+		}
+
+		&.btn-tertiary {
+			color: color(light);
+
+			background-color: color(tertiary);
+			text-transform: inherit;
+
+			&:hover {
+				color: color(light);
+				background-color: darken($color: color(tertiary), $amount: 20);
+			}
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			transition: .5s;
+		}
+
+		& i {
+			margin: space(p);
+		}
+
+	}
+
+	&.btn-lg {
+		padding: space(base) space(g);
+
+		font-size: font-size(large);
 	}
 }
