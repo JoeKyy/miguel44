@@ -32,11 +32,11 @@ $colors: (
     src: url('../fonts/Agrandir-Regular.eot');
     src: url('../fonts/Agrandir-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Agrandir-Regular.woff2') format('woff2'),
-        url('../fonts/Agrandir-Regular.woff') format('woff'),
-        url('../fonts/Agrandir-Regular.svg#Agrandir-Regular') format('svg');
+        url('../fonts/Agrandir-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+    font-stretch: normal;
 }
 
 @font-face {
@@ -44,11 +44,11 @@ $colors: (
     src: url('../fonts/Agrandir-Italic.eot');
     src: url('../fonts/Agrandir-Italic.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Agrandir-Italic.woff2') format('woff2'),
-        url('../fonts/Agrandir-Italic.woff') format('woff'),
-        url('../fonts/Agrandir-Italic.svg#Agrandir-Italic') format('svg');
+        url('../fonts/Agrandir-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
+    font-stretch: normal;
 }
 
 @font-face {
@@ -56,13 +56,133 @@ $colors: (
     src: url('../fonts/Agrandir-TextBold.eot');
     src: url('../fonts/Agrandir-TextBold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Agrandir-TextBold.woff2') format('woff2'),
-        url('../fonts/Agrandir-TextBold.woff') format('woff'),
-        url('../fonts/Agrandir-TextBold.svg#Agrandir-TextBold') format('svg');
+        url('../fonts/Agrandir-TextBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
+    font-stretch: normal;
 }
 
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-Tight.eot');
+  src: url('../fonts/Agrandir-Tight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-Tight.woff2') format('woff2'),
+      url('../fonts/Agrandir-Tight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-ThinItalic.eot');
+  src: url('../fonts/Agrandir-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-ThinItalic.woff2') format('woff2'),
+      url('../fonts/Agrandir-ThinItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-TightBlack.eot');
+  src: url('../fonts/Agrandir-TightBlack.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-TightBlack.woff2') format('woff2'),
+      url('../fonts/Agrandir-TightBlack.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-Narrow.eot');
+  src: url('../fonts/Agrandir-Narrow.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-Narrow.woff2') format('woff2'),
+      url('../fonts/Agrandir-Narrow.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: narrower;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-NarrowBlack.eot');
+  src: url('../fonts/Agrandir-NarrowBlack.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-NarrowBlack.woff2') format('woff2'),
+      url('../fonts/Agrandir-NarrowBlack.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: narrower;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-WideLight.eot');
+  src: url('../fonts/Agrandir-WideLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-WideLight.woff2') format('woff2'),
+      url('../fonts/Agrandir-WideLight.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: semi-expanded;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-WideBlackItalic.eot');
+  src: url('../fonts/Agrandir-WideBlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-WideBlackItalic.woff2') format('woff2'),
+      url('../fonts/Agrandir-WideBlackItalic.woff') format('woff');
+  font-weight: bolder;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: semi-expanded;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-Grand.eot');
+  src: url('../fonts/Agrandir-Grand.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-Grand.woff2') format('woff2'),
+      url('../fonts/Agrandir-Grand.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: ultra-expanded;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-GrandItalic.eot');
+  src: url('../fonts/Agrandir-GrandItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-GrandItalic.woff2') format('woff2'),
+      url('../fonts/Agrandir-GrandItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: ultra-expanded;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-GrandHeavy.eot');
+  src: url('../fonts/Agrandir-GrandHeavy.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Agrandir-GrandHeavy.woff2') format('woff2'),
+      url('../fonts/Agrandir-GrandHeavy.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: ultra-expanded;
+}
 
 
 /// @group    Fontes
@@ -70,19 +190,61 @@ $colors: (
 $font-config: (
   base: (
     name: 'Agrandir',
-    weight: 400
+    weight: 400,
+    stretch: normal,
   ),
   bold: (
     name: 'Agrandir',
-    weight: 700
+    weight: bold,
+    stretch: normal,
   ),
+  condensed: (
+    name: 'Agrandir',
+    weight: 400,
+    stretch: condensed,
+  ),
+  condensedBold: (
+    name: 'Agrandir',
+    weight: bold,
+    stretch: condensed
+  ),
+  narrower: (
+    name: 'Agrandir',
+    weight: 400,
+    stretch: narrower,
+  ),
+  narrowerBold: (
+    name: 'Agrandir',
+    weight: bold,
+    stretch: narrower,
+  ),
+  semiExpanded: (
+    name: 'Agrandir',
+    weight: bold,
+    stretch: semi-expanded,
+  ),
+  semiExpandedBold: (
+    name: 'Agrandir',
+    weight: bolder,
+    stretch: semi-expanded,
+  ),
+  ultraExpanded: (
+    name: 'Agrandir',
+    weight: 400,
+    stretch: ultra-expanded,
+  ),
+  ultraExpandedBold: (
+    name: 'Agrandir',
+    weight: bold,
+    stretch: ultra-expanded,
+  )
 ) !default;
 
 $font-fallback: Tahoma, Verdana, Segoe, sans-serif !default;
 
 /// @group    Fontes
 $font-sizes: (
-  xxxxbig		:	  64px,
+  xxxxbig		:	  56px,
   xxxbig		:	  48px,
   xxbig		  :	  36px,
   xbig		  :	  32px,

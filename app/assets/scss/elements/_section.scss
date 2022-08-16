@@ -1,4 +1,51 @@
 section {
-    width: 100vw;
-    height: 100vh;
+    &#home {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        min-height: 740px;
+        padding-top: space(xg);
+
+        background-image: url(../images/img-highight-01.png);
+        background-size: cover;
+        background-position: top center;
+
+        &:before {
+            @include generated-content(100%, 100%);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            background: linear-gradient(102.68deg, #212121 14.23%, rgba(33, 33, 33, 0) 79.77%);
+            mix-blend-mode: multiply;
+        }
+
+        .highlight-text {
+            position: relative;
+            z-index: 2;
+
+            width: 570px;
+            height: 300px;
+
+            color: color(light);
+
+            h2 {
+                @include font(semiExpanded);
+
+                font-size: font-size(xxxxbig);
+                line-height: 1;
+                letter-spacing: 0.02em;
+
+                + p {
+                    margin-top: space(m);
+
+                    font-size: font-size(large);
+                    line-height: 1;
+                }
+            }
+        }
+    }
 }

@@ -25,6 +25,7 @@
   @if map-has-key($font-config, $font-key){
     $name: map-get(map-get($font-config, $font-key), name);
     $weight: map-get(map-get($font-config, $font-key), weight);
+    $stretch: map-get(map-get($font-config, $font-key), stretch);
 
     @if $fallback {
       font-family: $name, $font-fallback;
@@ -32,6 +33,7 @@
       font-family: $name;
     }
     font-weight: $weight;
+    font-stretch: $stretch;
 
   } @else {
     @warn 'A chave "#{$font-key}" não exite no mapa "$font-config"!'
