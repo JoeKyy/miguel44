@@ -1,4 +1,19 @@
 section {
+    .sectionTitle {
+        span {
+            @include font(bold);
+
+            display: inline-block;
+            padding: space(s) space(p);
+
+            font-size: font-size(medium);
+            text-transform: uppercase;
+            color: color(primary);
+
+            background-color: color(secondary);
+        }
+    }
+
     &#home {
         position: relative;
 

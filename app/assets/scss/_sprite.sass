@@ -1,0 +1,30 @@
+$bg-pontinhos-x: 0px
+$bg-pontinhos-y: 0px
+$bg-pontinhos-offset-x: 0px
+$bg-pontinhos-offset-y: 0px
+$bg-pontinhos-width: 476px
+$bg-pontinhos-height: 476px
+$bg-pontinhos-total-width: 476px
+$bg-pontinhos-total-height: 476px
+$bg-pontinhos-image: '../images/sprite.png'
+$bg-pontinhos: 0px 0px 0px 0px 476px 476px 476px 476px '../images/sprite.png'
+
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  background-image: url(nth($sprite, 9))
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)

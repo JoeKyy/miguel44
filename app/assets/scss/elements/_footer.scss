@@ -1,7 +1,136 @@
 footer {
     & .footer-content {
+        position: relative;
         min-height: 667px;
+        padding: (space(xg) * 2) 0;
+
         background-color: color(primary);
+        color: color(light);
+
+        &:before {
+            @include generated-content(476px, 476px);
+            @include sprite($bg-pontinhos);
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &:after {
+            @include generated-content(476px, 476px);
+            @include sprite($bg-pontinhos);
+
+            position: absolute;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+
+            bottom: 0;
+            right: 0;
+        }
+
+        .footerTitle {
+            span {
+                display: inline-block;
+                padding: space(s) space(p);
+
+                font-size: font-size(medium);
+                text-transform: uppercase;
+                color: color(primary);
+
+                background-color: color(secondary);
+            }
+        }
+
+        .newsletterContent {
+            color: color(light);
+
+            .titleNewsLetter {
+                @include font(semiExpanded);
+                    margin-top: space(m);
+
+                    font-size: font-size(xxxbig);
+                    line-height: 1;
+                    letter-spacing: 0.02em;
+
+                    ~ p {
+                        margin-top: space(m);
+
+                        font-size: font-size(large);
+                        line-height: 1;
+                    }
+            }
+        }
+
+        .footerMenu {
+            ul {
+                li {
+                    display: inline-block;
+                    width: 49%;
+                    margin: 0 0 space(g);
+
+                    font-size: font-size(medium);
+                    line-height: 1;
+                    text-transform: uppercase;
+                    color: color(light);
+
+                    a {
+                        color: inherit;
+
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            @include font(bold);
+
+                            color: color(secondary);
+                        }
+                    }
+                }
+            }
+        }
+
+        .socialMenu {
+            nav {
+                ul {
+                    display: flex;
+
+                    li {
+                        position: relative;
+
+                        margin-left: space(base);
+                        margin-bottom: inherit;
+
+                        width: 50px;
+                        height: 50px;
+
+                        background-color: color(light);
+                        color: color(primary);
+                        border-radius: 50%;
+
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            background-color: color(secondary);
+                        }
+
+                        a {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     & .footer-logos {
         display: flex;
