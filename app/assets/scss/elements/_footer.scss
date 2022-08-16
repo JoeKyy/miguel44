@@ -30,6 +30,8 @@ footer {
 
         .footerTitle {
             span {
+                @include font(narrowerBold);
+
                 display: inline-block;
                 padding: space(s) space(p);
 
