@@ -1,31 +1,45 @@
 footer {
     & .footer-content {
+        @include responsive(large) {
+            min-height: 667px;
+            padding: (space(xg) * 2) 0;
+
+            text-align: left;
+        }
+
         position: relative;
-        min-height: 667px;
-        padding: (space(xg) * 2) 0;
+        z-index: 1;
+        min-height: inherit;
+        padding: (space(g) * 2) 0;
 
         background-color: color(primary);
         color: color(light);
+        text-align: center;
 
         &:before {
-            @include generated-content(476px, 476px);
-            @include sprite($bg-pontinhos);
+            @include responsive(large) {
+                @include generated-content(476px, 476px);
+                @include sprite($bg-pontinhos);
 
-            position: absolute;
-            bottom: 0;
-            left: 0;
+                position: absolute;
+                z-index: 0;
+                bottom: 0;
+                left: 0;
+            }
         }
 
         &:after {
-            @include generated-content(476px, 476px);
-            @include sprite($bg-pontinhos);
+            @include responsive(large) {
+                @include generated-content(476px, 476px);
+                @include sprite($bg-pontinhos);
 
-            position: absolute;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-
-            bottom: 0;
-            right: 0;
+                position: absolute;
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                z-index: 0;
+                bottom: 0;
+                right: 0;
+            }
         }
 
         .footerTitle {
@@ -44,30 +58,48 @@ footer {
         }
 
         .newsletterContent {
+            @include responsive(large) {
+                margin: inherit;
+            }
+
+            position: relative;
+            z-index: 1;
             color: color(light);
+            margin: 0 0 space(xg);
 
             .titleNewsLetter {
                 @include font(semiExpanded);
+                @include responsive(large) {
+                    font-size: font-size(xxxbig);
+                }
+
+                margin-top: space(m);
+
+                font-size: font-size(xxbig);
+                line-height: 1;
+                letter-spacing: 0.02em;
+
+                ~ p {
                     margin-top: space(m);
 
-                    font-size: font-size(xxxbig);
+                    font-size: font-size(large);
                     line-height: 1;
-                    letter-spacing: 0.02em;
-
-                    ~ p {
-                        margin-top: space(m);
-
-                        font-size: font-size(large);
-                        line-height: 1;
-                    }
+                }
             }
         }
 
         .footerMenu {
+            position: relative;
+            z-index: 1;
+
             ul {
                 li {
+                    @include responsive(large) {
+                        width: 49%;
+                    }
+
                     display: inline-block;
-                    width: 49%;
+                    width: 100%;
                     margin: 0 0 space(g);
 
                     font-size: font-size(medium);
@@ -91,9 +123,18 @@ footer {
         }
 
         .socialMenu {
+            position: relative;
+            z-index: 1;
+
             nav {
                 ul {
+                    @include responsive(large) {
+                        justify-content: inherit;
+                    }
+
                     display: flex;
+                    justify-content: center;
+                    margin: space(g) 0 0;
 
                     li {
                         position: relative;
@@ -135,9 +176,14 @@ footer {
         }
     }
     & .footer-logos {
+        @include responsive(large) {
+            padding-bottom: inherit;
+        }
+
         display: flex;
         align-items: center;
         min-height: 80px;
+        padding-bottom: space(g);
 
         background-color: color(primary, darken);
 
@@ -153,6 +199,7 @@ footer {
 
                 width: 170px;
                 height: 30px;
+                margin: space(g) auto;
 
                 font-size: 0;
 
@@ -180,12 +227,23 @@ footer {
         }
 
         ul {
+            @include responsive(large) {
+                flex-direction: row;
+                text-align: inherit;
+            }
+
             display: flex;
             align-items: center;
             justify-content: end;
+            flex-direction: column;
+            text-align: center;
 
             li {
-                margin: 0 space(base);
+                @include responsive(large) {
+                    margin: 0 space(base);
+                }
+
+                margin: space(p) space(base);
                 width: 270px;
 
                 font-size: font-size(small);
