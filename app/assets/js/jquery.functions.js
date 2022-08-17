@@ -18,4 +18,29 @@ $(function () {
 			$('.menu nav').addClass('nav-menu--close');
 		}
 	});
+
+	$('.avaliacoesSlider').slick({
+		dots: true,
+		arrows: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+		  ]
+	});
 });

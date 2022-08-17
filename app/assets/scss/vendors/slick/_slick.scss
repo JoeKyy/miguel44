@@ -1,39 +1,83 @@
 .slick-slider {
     button {
+        @include responsive(large) {
+            display: initial !important;
+
+            &.slick-arrow {
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                background: inherit;
+                text-rendering: auto;
+                font-size: 0;
+                border: 0;
+                cursor: pointer;
+
+                &.slick-prev {
+                    position: absolute;
+                    left: 0;
+                    margin: (space(xg) * 1.5) auto auto (- space(xg) * 3);
+                    &:before {
+                        @include sprite($icn-seta-left);
+
+                        display: block;
+                        content: "";
+                    }
+                }
+                &.slick-next {
+                    position: absolute;
+                    right: 0;
+                    margin: (space(xg) * 1.5) (- space(xg) * 3) auto auto;
+                    &:before {
+                        @include sprite($icn-seta-right);
+
+                        display: block;
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        display: none !important;
+
         outline: none;
 
-        &.slick-arrow {
-            position: absolute;
-            z-index: 10;
-            top: 0;
-            bottom: 0;
-            width: 30px;
-            height: 30px;
-            background: inherit;
-            text-rendering: auto;
-            font-size: 0;
-            border: 0;
-            cursor: pointer;
+    }
+}
 
-            &.slick-prev {
-                position: absolute;
-                left: 0;
-                margin: (space(xg) * 1.5) auto auto (- space(xg));
-                &:before {
+.slick-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-                    display: block;
-                    content: "";
-                }
-            }
-            &.slick-next {
-                position: absolute;
-                right: 0;
-                margin: (space(xg) * 1.5) (- space(xg)) auto auto;
-                &:before {
-                    display: block;
-                    content: "";
-                }
-            }
+    margin: auto auto (- space(base));
+    width: 230px;
+    height: 25px;
+
+    text-align: center;
+
+    li {
+        @include hidden-text();
+
+        display: inline-block;
+        width: 8px;
+        height: 2px;
+        margin-right: space(p);
+
+        background-color: lighten($color: color(dark), $amount: 30);
+
+        &.slick-active {
+            background-color: color(dark);
+
+        }
+
+        button {
+            opacity: 0;
         }
     }
 }

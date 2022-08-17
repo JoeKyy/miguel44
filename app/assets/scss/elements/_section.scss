@@ -449,4 +449,178 @@ section {
             }
         }
     }
+
+    &#avaliacoes {
+        margin: (space(xg) * 2) 0;
+
+        h4 {
+            @include font(semiExpanded);
+
+            position: relative;
+            z-index: 1;
+
+            margin: 0 0 space(g);
+
+            font-size: font-size(big);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: color(primary);
+        }
+
+        .avaliacoesSlider {
+            @include font(semiExpanded);
+            text-align: center;
+
+            .quote {
+                @include responsive(large) {
+                    font-size: font-size(xxxbig);
+                }
+
+                font-size: font-size(xbig);
+                line-height: 1;
+                letter-spacing: 0.02em;
+                color: color(dark);
+            }
+
+            .quoteUser {
+                @include responsive(large) {
+                    font-size: font-size(big);
+                }
+
+                margin: 0;
+
+                font-size: font-size(medium);
+                color: color(primary);
+            }
+
+            .quotePlace {
+                @include responsive(large) {
+                    font-size: font-size(large);
+                }
+
+                font-size: font-size(normal);
+                color: color(dark);
+            }
+
+        }
+
+        .numbersContent {
+            h5 {
+                @include responsive(large) {
+                    font-size: font-size(big);
+                }
+
+                position: relative;
+
+                font-size: font-size(small);
+
+                &::before {
+                    @include generated-content(100%, 2px);
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+
+                    margin: auto 0;
+
+                    background-color: color(light);
+                }
+
+                span {
+                    @include responsive(large) {
+                        padding: space(base) space(xg);
+                    }
+
+                    @include font(narrower);
+
+                    position: relative;
+                    z-index: 1;
+
+                    padding: space(base);
+
+                    background-color: color(light, lighter);
+                    border: 2px solid color(light);
+
+                    font-size: font-size(medium);
+                    text-transform: uppercase;
+
+                }
+            }
+
+            a {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+            .numbersBox {
+                border-bottom: 2px solid color(light);
+
+                > div {
+                    @include responsive(large) {
+                        padding-top: inherit;
+                    }
+
+                    padding-top: space(g);
+                    &:first-child {
+                        @include responsive(large) {
+                            padding-top: inherit;
+
+                            border-bottom: none;
+                        }
+                        position: relative;
+
+                        padding-top: 0;
+
+                        border-bottom: 2px solid color(light);
+
+                        &::before {
+                            @include responsive(large) {
+                                @include generated-content(2px, 120%);
+
+                                position: absolute;
+                                top: -30px;
+                                right: 0;
+
+                                background-color: color(light);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .numbersCount {
+                @include responsive(large) {
+                    font-size: font-size(xxxxbig);
+                }
+
+                @include font(semiExpanded);
+
+                position: relative;
+                z-index: 1;
+
+                font-size: font-size(xxbig);
+                line-height: 1;
+                letter-spacing: 0.02em;
+                color: color(primary);
+
+                &::before {
+                    @include generated-content(100%, 80%);
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+
+                    margin: auto auto 0;
+
+                    background-color: color(secondary);
+                }
+            }
+        }
+    }
 }
