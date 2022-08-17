@@ -22,6 +22,13 @@ section {
             background-image: url(../images/img-highight-01.png);
         }
 
+        @include responsive(small) {
+            align-items: center;
+            padding-top: space(xg);
+
+            background-image: url(../images/img-highight-01.png);
+        }
+
         position: relative;
 
         display: flex;

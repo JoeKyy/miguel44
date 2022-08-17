@@ -410,11 +410,12 @@ body {
 main {
   position: relative;
   z-index: 1;
-  margin-top: -66px;
+  margin-top: -100px;
   padding-top: 85px;
   min-height: calc(100vh - 747px); }
   @media (min-width: 79.9375em) {
     main {
+      margin-top: -66px;
       padding-top: 66px; } }
 
 /*------------------------------------*\
@@ -441,6 +442,11 @@ section#home {
   background-size: cover;
   background-position: top center; }
   @media (min-width: 79.9375em) {
+    section#home {
+      align-items: center;
+      padding-top: 56px;
+      background-image: url(../images/img-highight-01.png); } }
+  @media (min-width: 40.0625em) {
     section#home {
       align-items: center;
       padding-top: 56px;
