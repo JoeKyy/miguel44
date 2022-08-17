@@ -141,6 +141,87 @@ section {
         }
     }
 
+    &#materiais {
+        padding: space(m) 0;
+
+        background-color: color(light);
+
+        h4 {
+            @include responsive(large) {
+                font-size: font-size(xxbig);
+            }
+
+            @include font(semiExpanded);
+
+            position: relative;
+            z-index: 1;
+
+            margin: 0 0 space(g);
+
+            font-size: font-size(xbig);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: color(primary);
+        }
+
+        .materialContainer {
+            @include responsive(large) {
+                flex-flow: wrap;
+                overflow: inherit;
+            }
+
+            flex-flow: nowrap;
+            overflow: auto;
+        }
+
+        .materialContent {
+            min-width: 320px;
+            margin: 0 0 space(g);
+            padding: space(gg) space(g);
+
+            background-color: color(light);
+            border: 1px solid rgba(33, 33, 33, 0.12);
+            border-radius: 2px;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+
+                &:before {
+                    @include generated-content(48px, 48px);
+
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    z-index: 0;
+
+                    background-color: color(secondary);
+                    border-radius: 50%;
+                }
+
+
+                svg {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+
+            h5 {
+                @include font(semiExpanded);
+
+                position: relative;
+                z-index: 1;
+
+                margin: space(xg) 0 space(m);
+
+                font-size: font-size(big);
+                line-height: 1;
+                letter-spacing: 0.02em;
+                color: color(primary);
+            }
+        }
+    }
+
     &#mobiliza {
         .mobilizaContainer {
             @include responsive(large) {
@@ -266,70 +347,92 @@ section {
         }
     }
 
-    &#materiais {
-        padding: space(m) 0;
+    &#propostas {
+        margin: 0 0 space(g);
 
-        background-color: color(light);
+        .propostasContainer {
+            padding: space(m) (space(g) * 2) 0;
 
-        h4 {
-            @include responsive(large) {
-                font-size: font-size(xxbig);
-            }
+            background-color: color(primary, darken);
+            color: color(light);
 
-            @include font(semiExpanded);
-
-            position: relative;
-            z-index: 1;
-
-            margin: 0 0 space(g);
-
-            font-size: font-size(xbig);
-            line-height: 1;
-            letter-spacing: 0.02em;
-            color: color(primary);
-        }
-
-        .materialContainer {
-            @include responsive(large) {
-                flex-flow: wrap;
-                overflow: inherit;
-            }
-
-            flex-flow: nowrap;
-            overflow: auto;
-        }
-
-        .materialContent {
-            min-width: 320px;
-            margin: 0 0 space(g);
-            padding: space(gg) space(g);
-
-            background-color: color(light);
-            border: 1px solid rgba(33, 33, 33, 0.12);
-            border-radius: 2px;
-
-            .icon {
-                position: relative;
-                display: inline-block;
-
-                &:before {
-                    @include generated-content(48px, 48px);
-
-                    position: absolute;
-                    top: -10px;
-                    right: -10px;
-                    z-index: 0;
-
-                    background-color: color(secondary);
-                    border-radius: 50%;
+            h4 {
+                @include responsive(large) {
+                    font-size: font-size(xxbig);
                 }
 
+                @include font(semiExpanded);
 
-                svg {
+                position: relative;
+                z-index: 1;
+
+                margin: 0 0 space(g);
+
+                font-size: font-size(xbig);
+                line-height: 1;
+                letter-spacing: 0.02em;
+                color: color(light);
+            }
+
+            .propostasContent {
+                @include responsive(large) {
+                    margin: 0 0 space(m);
+                    padding: space(gg) space(m) space(gg) 0;
+
+                    text-align: left;
+                }
+
+                margin: 0;
+                padding: space(g) 0;
+
+                color: color(light);
+                text-align: center;
+
+                border-top: 1px solid color(primary);
+
+                .icon {
+                    position: relative;
+                    display: inline-block;
+
+                    &:before {
+                        @include generated-content(48px, 48px);
+
+                        position: absolute;
+                        top: -10px;
+                        right: -10px;
+                        z-index: 0;
+
+                        background-color: color(primary);
+                        border-radius: 50%;
+                    }
+
+
+                    svg {
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+
+                h5 {
+                    @include font(semiExpanded);
+
                     position: relative;
                     z-index: 1;
+
+                    margin: space(m) 0;
+
+                    font-size: font-size(big);
+                    line-height: 1;
+                    letter-spacing: 0.02em;
+                    color: color(light);
                 }
             }
+        }
+
+        .planoContainer {
+            padding: space(g) (space(g)) 0;
+
+            background-color: color(light);
 
             h5 {
                 @include font(semiExpanded);
@@ -337,7 +440,7 @@ section {
                 position: relative;
                 z-index: 1;
 
-                margin: space(xg) 0 space(m);
+                margin: space(m) 0 space(p);
 
                 font-size: font-size(big);
                 line-height: 1;
