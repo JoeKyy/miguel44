@@ -717,7 +717,7 @@ section#agenda {
             font-stretch: narrower;
             content: attr(data-dia);
             position: absolute;
-            top: 40px;
+            top: 33px;
             left: 5px;
             right: 0;
             bottom: 0;
@@ -726,6 +726,9 @@ section#agenda {
             padding: 8px 0;
             font-size: 0.875rem;
             border-top: 2px solid #FFFF0A; }
+            @media (min-width: 79.9375em) {
+              section#agenda .agendaContainer .agendaContent .agendaNav button.active:before {
+                top: 40px; } }
           section#agenda .agendaContainer .agendaContent .agendaNav button.active::after {
             background-image: url("../images/sprite.png");
             background-position: -476px -144px;

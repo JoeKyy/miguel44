@@ -314,12 +314,16 @@ section {
                             opacity: 1;
 
                             &:before {
+                                @include responsive(large) {
+                                    top: 40px;
+                                }
+
                                 @include font(narrower);
 
                                 content: attr(data-dia);
 
                                 position: absolute;
-                                top: 40px;
+                                top: 33px;
                                 left: 5px;
                                 right: 0;
                                 bottom: 0;
