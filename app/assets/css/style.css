@@ -586,6 +586,187 @@ section#bio {
           right: 85px;
           transform: scale(0.8); } }
 
+section#agenda {
+  margin: 112px 0; }
+  section#agenda h4 {
+    font-family: "Agrandir";
+    font-weight: bold;
+    font-stretch: semi-expanded;
+    position: relative;
+    z-index: 1;
+    margin: 0 0 32px;
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #1BACE0; }
+    @media (min-width: 79.9375em) {
+      section#agenda h4 {
+        font-size: 2.25rem; } }
+    section#agenda h4 svg {
+      position: absolute;
+      top: -35px;
+      right: -85px;
+      transform: scale(0.7);
+      z-index: -1; }
+      @media (min-width: 79.9375em) {
+        section#agenda h4 svg {
+          top: -45px;
+          right: 220px;
+          transform: scale(0.8); } }
+  section#agenda .agendaContainer button {
+    border: none; }
+    section#agenda .agendaContainer button:hover, section#agenda .agendaContainer button:active, section#agenda .agendaContainer button:focus {
+      border: none;
+      outline: none; }
+  section#agenda .agendaContainer .agendaHeader {
+    padding: 56px 0 32px;
+    border: 1px solid #1BACE0; }
+    section#agenda .agendaContainer .agendaHeader li button {
+      font-family: "Agrandir";
+      font-weight: bold;
+      font-stretch: semi-expanded;
+      position: relative;
+      z-index: 1;
+      margin: 0 16px 16px;
+      padding: 0 0 8px;
+      font-size: 1.125rem;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      color: #1BACE0;
+      text-transform: uppercase; }
+      @media (min-width: 79.9375em) {
+        section#agenda .agendaContainer .agendaHeader li button {
+          font-size: 2rem; } }
+      section#agenda .agendaContainer .agendaHeader li button.active:before {
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #FFFF0A; }
+      section#agenda .agendaContainer .agendaHeader li button.disabled {
+        opacity: .16; }
+  section#agenda .agendaContainer .agendaContent {
+    min-height: 680px;
+    padding: 48px;
+    background-color: #19a2d2;
+    font-size: 1.5rem;
+    color: #F1F4F5; }
+    @media (min-width: 79.9375em) {
+      section#agenda .agendaContainer .agendaContent {
+        background-image: url(../images/bg-agenda.png);
+        background-size: 100% 100%;
+        background-position: top center; } }
+    section#agenda .agendaContainer .agendaContent .agendaNav {
+      position: relative;
+      padding: 16px 0; }
+      section#agenda .agendaContainer .agendaContent .agendaNav:before {
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        content: '';
+        position: absolute;
+        bottom: 30px;
+        background-color: #FFFF0A; }
+        @media (min-width: 79.9375em) {
+          section#agenda .agendaContainer .agendaContent .agendaNav:before {
+            display: inline-block;
+            width: 2px;
+            height: 100%;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -16px;
+            background-color: #FFFF0A; } }
+      section#agenda .agendaContainer .agendaContent .agendaNav .nav {
+        padding-bottom: 32px;
+        flex-wrap: nowrap;
+        overflow: auto; }
+        @media (min-width: 79.9375em) {
+          section#agenda .agendaContainer .agendaContent .agendaNav .nav {
+            padding: inherit;
+            flex-wrap: initial;
+            overflow: initial; } }
+      section#agenda .agendaContainer .agendaContent .agendaNav button {
+        font-family: "Agrandir";
+        font-weight: bold;
+        font-stretch: semi-expanded;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 120px;
+        margin: 0 16px 48px;
+        padding: 0 0 4px;
+        font-size: 1rem;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        color: #F1F4F5;
+        text-align: center;
+        opacity: 0.4; }
+        @media (min-width: 79.9375em) {
+          section#agenda .agendaContainer .agendaContent .agendaNav button {
+            font-size: 1.5rem; } }
+        section#agenda .agendaContainer .agendaContent .agendaNav button.active {
+          color: #FFFF0A;
+          opacity: 1; }
+          section#agenda .agendaContainer .agendaContent .agendaNav button.active:before {
+            font-family: "Agrandir";
+            font-weight: 400;
+            font-stretch: narrower;
+            content: attr(data-dia);
+            position: absolute;
+            top: 40px;
+            left: 5px;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            margin: auto;
+            padding: 8px 0;
+            font-size: 0.875rem;
+            border-top: 2px solid #FFFF0A; }
+          section#agenda .agendaContainer .agendaContent .agendaNav button.active::after {
+            background-image: url("../images/sprite.png");
+            background-position: -476px -144px;
+            width: 34px;
+            height: 33px;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto auto -74.8px auto;
+            transform: rotate(92deg); }
+            @media (min-width: 79.9375em) {
+              section#agenda .agendaContainer .agendaContent .agendaNav button.active::after {
+                margin: auto -64.8px auto auto;
+                transform: inherit; } }
+    section#agenda .agendaContainer .agendaContent .agendaBody {
+      font-family: "Agrandir";
+      font-weight: 400;
+      font-stretch: normal; }
+      @media (min-width: 79.9375em) {
+        section#agenda .agendaContainer .agendaContent .agendaBody {
+          padding: 32px 48px; } }
+      section#agenda .agendaContainer .agendaContent .agendaBody dl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.125rem;
+        text-align: center; }
+        @media (min-width: 79.9375em) {
+          section#agenda .agendaContainer .agendaContent .agendaBody dl {
+            flex-direction: row;
+            font-size: 1.5rem;
+            text-align: left; } }
+        section#agenda .agendaContainer .agendaContent .agendaBody dl > * {
+          margin: 16px; }
+        section#agenda .agendaContainer .agendaContent .agendaBody dl dt {
+          width: 80px;
+          color: #FFFF0A; }
+
 section#materiais {
   padding: 24px 0;
   background-color: #F1F4F5; }

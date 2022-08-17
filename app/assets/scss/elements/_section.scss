@@ -141,6 +141,257 @@ section {
         }
     }
 
+    &#agenda {
+        margin: (space(xg) * 2) 0;
+
+        h4 {
+            @include responsive(large) {
+                font-size: font-size(xxbig);
+            }
+
+            @include font(semiExpanded);
+
+            position: relative;
+            z-index: 1;
+
+            margin: 0 0 space(g);
+
+            font-size: font-size(xbig);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: color(primary);
+
+            svg {
+                @include responsive(large) {
+                    top: -45px;
+                    right: 220px;
+                    transform: scale(0.8);
+                }
+
+                position: absolute;
+                top: -35px;
+                right: -85px;
+                transform: scale(0.7);
+                z-index: -1;
+
+            }
+        }
+
+        .agendaContainer {
+            button {
+                border: none;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            .agendaHeader {
+                padding: space(xg) 0 space(g);
+                border: 1px solid color(primary);
+
+                li {
+                    button {
+                        @include responsive(large) {
+                            font-size: font-size(xbig);
+                        }
+
+                        @include font(semiExpanded);
+
+                        position: relative;
+                        z-index: 1;
+
+                        margin: 0 space(base) space(base);
+                        padding: 0 0 space(p);
+
+                        font-size: font-size(large);
+                        line-height: 1;
+                        letter-spacing: 0.1em;
+                        color: color(primary);
+                        text-transform: uppercase;
+
+                        &.active {
+                            &:before {
+                                @include generated-content(100%, 2px);
+
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+
+                                background-color: color(secondary);
+                            }
+                        }
+
+                        &.disabled {
+                            opacity: .16;
+                        }
+                    }
+                }
+
+            }
+            .agendaContent {
+                @include responsive(large) {
+                    background-image: url(../images/bg-agenda.png);
+                    background-size: 100% 100%;
+                    background-position: top center;
+                }
+
+                min-height: 680px;
+                padding: space(gg);
+
+                background-color: darken($color: color(primary), $amount: 3);
+
+                font-size: font-size(big);
+                color: color(light);
+
+                .agendaNav {
+                    position: relative;
+
+                    padding: space(base) 0;
+
+                    &:before {
+                        @include responsive(large) {
+                            @include generated-content(2px, 100%);
+
+                            position: absolute;
+                            top: 0;
+                            right: (- space(base));
+
+                            background-color: color(secondary)
+                        }
+
+                        @include generated-content(100%, 2px);
+
+                        position: absolute;
+                        bottom: 30px;
+
+                        background-color: color(secondary)
+
+                    }
+
+                    .nav {
+                        @include responsive(large) {
+                            padding: inherit;
+
+                            flex-wrap: initial;
+                            overflow: initial;
+                        }
+
+                        padding-bottom: space(g);
+
+                        flex-wrap: nowrap;
+                        overflow: auto;
+                    }
+
+                    button {
+                        @include responsive(large) {
+                            font-size: font-size(big);
+                        }
+
+                        @include font(semiExpanded);
+
+                        position: relative;
+                        z-index: 1;
+
+                        display: flex;
+
+                        width: 120px;
+                        margin: 0 space(base) space(gg);
+                        padding: 0 0 space(s);
+
+                        font-size: font-size(medium);
+                        line-height: 1;
+                        letter-spacing: 0.1em;
+                        color: color(light);
+                        text-align: center;
+                        opacity: 0.4;
+
+                        &.active {
+                            color: color(secondary);
+                            opacity: 1;
+
+                            &:before {
+                                @include font(narrower);
+
+                                content: attr(data-dia);
+
+                                position: absolute;
+                                top: 40px;
+                                left: 5px;
+                                right: 0;
+                                bottom: 0;
+
+                                width: 100%;
+                                margin: auto;
+                                padding: space(p) 0;
+
+                                font-size: font-size(normal);
+
+                                border-top: 2px solid color(secondary);
+
+                            }
+
+                            &::after {
+                                @include responsive(large) {
+                                    margin: auto -64.8px auto auto;
+                                    transform: inherit
+                                }
+
+                                @include sprite($icn-seta_agenda);
+
+                                content: "";
+
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+
+                                margin: auto auto -74.8px auto;
+                                transform: rotate(92deg);
+                            }
+                        }
+                    }
+
+                }
+                .agendaBody {
+                    @include font(base);
+                    @include responsive(large) {
+                        padding: space(g) space(gg);
+                    }
+
+                    dl {
+                        @include responsive(large) {
+                            flex-direction: row;
+
+                            font-size: font-size(big);
+                            text-align: left;
+                        }
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        font-size: font-size(large);
+                        text-align: center;
+
+                        > * {
+                            margin: space(base);
+                        }
+
+                        dt {
+                            width: 80px;
+                            color: color(secondary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &#materiais {
         padding: space(m) 0;
 
