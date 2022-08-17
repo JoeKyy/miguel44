@@ -140,4 +140,60 @@ section {
             }
         }
     }
+
+    &#mobiliza {
+        .mobilizaContainer {
+            @include responsive(large) {
+                padding: 0;
+
+                background-image: url(../images/bg-zap.png);
+                background-size: cover;
+
+                text-align: left;
+            }
+
+            position: relative;
+
+            padding: space(base) space(base) 0;
+
+            color: color(light);
+            text-align: center;
+
+            background-color: color(primary);
+
+            svg {
+                @include responsive(large) {
+                    top: -85px;
+                    right: 85px;
+                    transform: scale(.8);
+                }
+
+                position: absolute;
+                top: -64px;
+                right: -26px;
+                transform: scale(0.7);
+                z-index: -1;
+
+            }
+        }
+
+        h4 {
+            @include responsive(large) {
+                font-size: font-size(xxbig);
+            }
+
+            @include font(semiExpanded);
+
+            position: relative;
+            z-index: 1;
+
+            font-size: font-size(xbig);
+            line-height: 1;
+            letter-spacing: 0.02em;
+        }
+
+        img {
+            margin: 0 0 (- space(p));
+        }
+    }
 }
