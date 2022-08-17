@@ -265,4 +265,85 @@ section {
             }
         }
     }
+
+    &#materiais {
+        padding: space(m) 0;
+
+        background-color: color(light);
+
+        h4 {
+            @include responsive(large) {
+                font-size: font-size(xxbig);
+            }
+
+            @include font(semiExpanded);
+
+            position: relative;
+            z-index: 1;
+
+            margin: 0 0 space(g);
+
+            font-size: font-size(xbig);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: color(primary);
+        }
+
+        .materialContainer {
+            @include responsive(large) {
+                flex-flow: wrap;
+                overflow: inherit;
+            }
+
+            flex-flow: nowrap;
+            overflow: auto;
+        }
+
+        .materialContent {
+            min-width: 320px;
+            margin: 0 0 space(g);
+            padding: space(gg) space(g);
+
+            background-color: color(light);
+            border: 1px solid rgba(33, 33, 33, 0.12);
+            border-radius: 2px;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+
+                &:before {
+                    @include generated-content(48px, 48px);
+
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    z-index: 0;
+
+                    background-color: color(secondary);
+                    border-radius: 50%;
+                }
+
+
+                svg {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+
+            h5 {
+                @include font(semiExpanded);
+
+                position: relative;
+                z-index: 1;
+
+                margin: space(xg) 0 space(m);
+
+                font-size: font-size(big);
+                line-height: 1;
+                letter-spacing: 0.02em;
+                color: color(primary);
+            }
+        }
+    }
 }

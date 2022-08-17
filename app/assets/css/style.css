@@ -242,10 +242,14 @@ a.btn,
 [type="submit"].btn,
 button.btn {
   padding: 8px 16px;
+  border: 0;
   border-radius: 2px; }
   a.btn.btn-primary,
   [type="submit"].btn.btn-primary,
   button.btn.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #F1F4F5;
     background-color: #1BACE0;
     text-transform: inherit; }
@@ -254,6 +258,10 @@ button.btn {
     button.btn.btn-primary:hover {
       color: #F1F4F5;
       background-color: #1689b2; }
+    a.btn.btn-primary svg,
+    [type="submit"].btn.btn-primary svg,
+    button.btn.btn-primary svg {
+      stroke: #F1F4F5; }
   a.btn.btn-tertiary,
   [type="submit"].btn.btn-tertiary,
   button.btn.btn-tertiary {
@@ -670,6 +678,66 @@ section#reconhecimentos .textContent {
     line-height: 1;
     letter-spacing: .5;
     color: #1BACE0; }
+
+section#materiais {
+  padding: 24px 0;
+  background-color: #F1F4F5; }
+  section#materiais h4 {
+    font-family: "Agrandir";
+    font-weight: bold;
+    font-stretch: semi-expanded;
+    position: relative;
+    z-index: 1;
+    margin: 0 0 32px;
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #1BACE0; }
+    @media (min-width: 79.9375em) {
+      section#materiais h4 {
+        font-size: 2.25rem; } }
+  section#materiais .materialContainer {
+    flex-flow: nowrap;
+    overflow: auto; }
+    @media (min-width: 79.9375em) {
+      section#materiais .materialContainer {
+        flex-flow: wrap;
+        overflow: inherit; } }
+  section#materiais .materialContent {
+    min-width: 320px;
+    margin: 0 0 32px;
+    padding: 48px 32px;
+    background-color: #F1F4F5;
+    border: 1px solid rgba(33, 33, 33, 0.12);
+    border-radius: 2px; }
+    section#materiais .materialContent .icon {
+      position: relative;
+      display: inline-block; }
+      section#materiais .materialContent .icon:before {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        z-index: 0;
+        background-color: #FFFF0A;
+        border-radius: 50%; }
+      section#materiais .materialContent .icon svg {
+        position: relative;
+        z-index: 1; }
+    section#materiais .materialContent h5 {
+      font-family: "Agrandir";
+      font-weight: bold;
+      font-stretch: semi-expanded;
+      position: relative;
+      z-index: 1;
+      margin: 56px 0 24px;
+      font-size: 1.5rem;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: #1BACE0; }
 
 /*------------------------------------*\
     FOOTER
