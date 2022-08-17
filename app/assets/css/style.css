@@ -174,6 +174,53 @@ td {
 /*------------------------------------*\
     TYPOGRAPHY
 \*------------------------------------*/
+h1 {
+  font-family: "Agrandir";
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 3.5rem;
+  line-height: 1; }
+
+h2 {
+  font-family: "Agrandir";
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 3rem;
+  line-height: 1; }
+
+h3 {
+  font-family: "Agrandir";
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 3rem;
+  line-height: 1; }
+
+h4 {
+  font-family: "Agrandir";
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 2rem;
+  line-height: 1; }
+
+h5 {
+  font-family: "Agrandir";
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+h6 {
+  font-family: "Agrandir";
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 1.125rem;
+  line-height: 1; }
+
+p {
+  margin: 0 0 32px;
+  font-size: 1.125rem;
+  line-height: 1.5; }
+
 a {
   color: inherit; }
   a:hover {
@@ -385,8 +432,7 @@ html {
   width: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
-  font-size: 16px;
-  background-color: black; }
+  font-size: 16px; }
   @media (min-width: 79.9375em) {
     html {
       -webkit-overflow-scrolling: inherit;
@@ -490,6 +536,44 @@ section#home {
         margin-top: 24px;
         font-size: 1.125rem;
         line-height: 1; }
+
+section#bio {
+  text-align: center; }
+  @media (min-width: 79.9375em) {
+    section#bio {
+      text-align: left; } }
+  section#bio img {
+    max-width: 100%;
+    width: 100%;
+    height: auto; }
+    @media (min-width: 79.9375em) {
+      section#bio img {
+        width: initial;
+        height: inherit; } }
+  section#bio h4 {
+    font-family: "Agrandir";
+    font-weight: bold;
+    font-stretch: semi-expanded;
+    position: relative;
+    z-index: 1;
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #1BACE0; }
+    @media (min-width: 79.9375em) {
+      section#bio h4 {
+        font-size: 2.25rem; } }
+    section#bio h4 svg {
+      position: absolute;
+      top: -64px;
+      right: -26px;
+      transform: scale(0.7);
+      z-index: -1; }
+      @media (min-width: 79.9375em) {
+        section#bio h4 svg {
+          top: -85px;
+          right: 85px;
+          transform: scale(0.8); } }
 
 /*------------------------------------*\
     FOOTER

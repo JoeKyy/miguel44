@@ -90,4 +90,54 @@ section {
             }
         }
     }
+
+    &#bio {
+        @include responsive(large) {
+            text-align: left;
+        }
+
+        text-align: center;
+
+        img {
+            @include responsive(large) {
+                width: initial;
+                height: inherit;
+            }
+
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+
+        h4 {
+            @include responsive(large) {
+                font-size: font-size(xxbig);
+            }
+
+            @include font(semiExpanded);
+
+            position: relative;
+            z-index: 1;
+
+            font-size: font-size(xxbig);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: color(primary);
+
+            svg {
+                @include responsive(large) {
+                    top: -85px;
+                    right: 85px;
+                    transform: scale(.8);
+                }
+
+                position: absolute;
+                top: -64px;
+                right: -26px;
+                transform: scale(0.7);
+                z-index: -1;
+
+            }
+        }
+    }
 }
