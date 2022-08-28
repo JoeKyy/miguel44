@@ -78,14 +78,32 @@ header {
                     width: 100%;
                     height: 100vh;
 
-                    background-color: color(light);
+                    background-color: color(primary);
+                    color: color(light);
 
                     ul {
                         display: block;
                         margin: space(xg) space(m);
 
                         li {
-                            margin-bottom: space(m);
+                            display: inline-block;
+                            width: 100%;
+                            margin: 0 0 space(g);
+
+                            a {
+                                font-size: font-size(medium);
+                                line-height: 1;
+                                text-transform: uppercase;
+                                color: color(light);
+
+                                &:hover,
+                                &:active,
+                                &:focus {
+                                    @include font(bold);
+
+                                    color: color(secondary);
+                                }
+                            }
                         }
                     }
                 }

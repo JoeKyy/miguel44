@@ -54,7 +54,7 @@ section {
 
         .highlight-text {
             @include responsive(large) {
-                margin: inherit;
+                margin: auto auto auto space(g);
                 width: 570px;
                 height: 300px;
 
@@ -441,6 +441,8 @@ section {
             .icon {
                 position: relative;
                 display: inline-block;
+                width: 64px;
+                height: 64px;
 
                 &:before {
                     @include generated-content(48px, 48px);
